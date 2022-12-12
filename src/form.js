@@ -26,7 +26,8 @@ function arrayForm(inputs, {template = arrayTemplate} = {}) {
       for (let i = 0, n = inputs.length; i < n; ++i) {
         inputs[i].value = v[i];
       }
-    }
+    },
+    configurable: true
   });
 }
 
@@ -52,6 +53,7 @@ function objectForm(inputs, {template = objectTemplate} = {}) {
       for (const name in inputs) {
         inputs[name].value = v[name];
       }
-    }
+    },
+    configurable: true
   });
 }
